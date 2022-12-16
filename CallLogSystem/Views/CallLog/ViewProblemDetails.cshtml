@@ -1,0 +1,71 @@
+﻿@model CallLogSystem.Models.CallLog
+
+@{
+    ViewData["Title"] = "ViewProblemDetails";
+}
+
+<h3 class="text-center text-info">View Problem Details</h3>
+
+<div>
+ 
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+        Nature of Problem
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Problem)
+        </dd>
+         <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.TextAreaFor(model => model.Description,new { @class = "form-control", @rows="15",})
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+       
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IssueDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IssueDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ReportedBy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ReportedBy)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Priority)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Priority)
+        </dd>
+
+         <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ActionTaken)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ActionTaken,new {@class="form-control",@rows="15"})
+        </dd>        
+      
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Remarks)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Remarks)
+        </dd>
+        
+    </dl>
+</div>
+<div>
+   @* <a class="btn btn-sm btn-outline-primary" asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |*@
+
+    <a class="btn btn-sm btn-warning col-12" asp-action="Index">Back to List</a>
+</div>
