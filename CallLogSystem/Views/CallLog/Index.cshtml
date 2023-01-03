@@ -58,7 +58,7 @@
                     <td>@call.Id</td>
                     <td>@call.Problem</td>
 
-                    <td>@call.Description</td>
+                    <p><td>@call.Description</td></p>
 
                     <td>@call.Location</td>
 
@@ -79,6 +79,7 @@
                         {
                             <span class="badge bg-danger">Not Resolved</span>
                         }
+                       
                     </td>
                     <td>
                         @if (@call.IsActive == true)
@@ -107,13 +108,4 @@
     </table>
 </div>
 
-@*@section scripts{
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css" />
-    <script type="text/javascript" src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#myTableData').DataTable();
-        });
-    </script>
-
-    }  *@       
+    

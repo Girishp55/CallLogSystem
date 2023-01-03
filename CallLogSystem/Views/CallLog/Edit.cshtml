@@ -1,0 +1,53 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model CallLogSystem.Models.CallLog
+
+<h3>Edit the Data</h3>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-12">
+
+            <form asp-action="Edit" asp-controller="CallLog" >
+
+            <input type="hidden" asp-for="Id" />
+           
+            <label asp-for="Problem"></label>
+             <input type="text" asp-for="Problem" class="form-control" placeholder="Issue Detail" />
+             <span asp-validation-for="Problem" class="text-danger"></span>          
+
+            <label asp-for="Description"></label>
+            <textarea asp-for="Description" cols="40" rows="5" class="form-control" placeholder="Enter Problem Description"></textarea>
+
+            <label asp-for="Location"></label>
+            <input type="text" asp-for="Location" class="form-control" placeholder="Enter Location" />
+
+            <label asp-for="IssueDate"></label>
+            <input type="datetime" asp-for="IssueDate" class="form-control" placeholder="Enter Issue Date" />
+
+            <label asp-for="ReportedBy"></label>
+            <input type="text" asp-for="ReportedBy" class="form-control" placeholder="Enter Reported By Name" />
+
+            <label asp-for="ActionTaken"></label>
+            <textarea asp-for="ActionTaken" cols="20" rows="5" class="form-control" placeholder="Action Taken"></textarea>
+
+            <label asp-for="Remarks"></label>
+            <input type="text" asp-for="Remarks" class="form-control" placeholder="Remarks" />
+
+             @*<label asp-for="IsActive"></label>
+            <input type="checkbox" asp-for="IsActive" value="IsActive"  />
+            <label asp-for="IssueResolved"></label>
+                <input type="checkbox" asp-for="IssueResolved" value="IssueResolved" />
+            <br />*@
+
+            <input type="submit" asp-action="Edit" asp-controller="CallLog" class="btn btn-success" />
+            </form>
+
+        </div>
+
+        
+    </div>
+</div>
+
